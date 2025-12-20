@@ -1,0 +1,48 @@
+version: "3.8"
+
+services:
+  poller:
+    build: .
+    container_name: sds011-poller
+    devices:
+      - "/dev/ttyUSB0:/dev/ttyUSB0"
+    volumes:
+      - ./config.toml:/config/config.toml:ro
+      - ./data:/data
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: ["python", "-m", "sds011_poller", "--config", "/config/config.toml", "--log-level", "DEBUG"]
+    restart: unless-stopped
+    group_add:
+      - "dialout"
+
+  prometheus:
+    image: prom/prometheus:v2.49.1
+    container_name: sds011-prometheus
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+      - --storage.tsdb.path=/prometheus
+    volumes:
+      - ./docker/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ./prometheus-data:/prometheus
+    ports:
+      - "9090:9090"
+    depends_on:
+      - poller
+    restart: unless-stopped
+
+  grafana:
+    image: grafana/grafana:10.2.3
+    container_name: sds011-grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    volumes:
+      - ./docker/grafana/datasources:/etc/grafana/provisioning/datasources:ro
+      - ./docker/grafana/dashboards:/etc/grafana/provisioning/dashboards:ro
+      - ./docker/grafana/dashboards-json:/var/lib/grafana/dashboards:ro
+    depends_on:
+      - prometheus
+    restart: unless-stopped

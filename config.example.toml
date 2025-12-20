@@ -1,0 +1,23 @@
+[serial]
+port = "/dev/serial/by-id/usb-1a86_USB_Serial-if00-port0"  # Prefer stable by-id path
+baud = 9600
+timeout_ms = 1500
+
+[sensor]
+mode = "query"                # "query" only for now
+wake_before_read_s = 30       # Warm-up time before querying (seconds)
+sleep_after_read = true
+max_query_retries = 2
+min_query_interval_s = 3      # Keep >= 3s as safety baseline
+
+[schedule]
+interval_s = 60               # Periodic read cadence (seconds)
+jitter_s = 2                  # Random +/- jitter to avoid strict periodicity
+max_consecutive_failures = 5
+backoff_s = 10                # Wait before reconnect attempts
+
+[output]
+format = "prometheus"         # "jsonl" | "logfmt" | "prometheus"
+prometheus_host = "0.0.0.0"   # Bind address for Prometheus exporter
+prometheus_port = 9101        # Port for Prometheus exporter
+file_path = "/data/readings.jsonl"  # When set (and non-prometheus), append lines to host-mapped file

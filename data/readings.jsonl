@@ -1,0 +1,26 @@
+{"timestamp":"2025-12-20T17:55:29.374388+00:00","status":"error","error":"RuntimeError","message":"Failed to read from sensor after 3 attempts","attempt":1,"max_attempts":5}
+{"timestamp":"2025-12-20T17:56:28.486816+00:00","status":"error","error":"RuntimeError","message":"Failed to read from sensor after 3 attempts","attempt":2,"max_attempts":5}
+{"timestamp":"2025-12-20T17:57:28.678402+00:00","status":"error","error":"RuntimeError","message":"Failed to read from sensor after 3 attempts","attempt":3,"max_attempts":5}
+{"timestamp":"2025-12-20T17:58:28.381363+00:00","status":"error","error":"RuntimeError","message":"Failed to read from sensor after 3 attempts","attempt":4,"max_attempts":5}
+{"timestamp":"2025-12-20T17:59:27.017559+00:00","status":"error","error":"RuntimeError","message":"Failed to read from sensor after 3 attempts","attempt":5,"max_attempts":5}
+{"timestamp":"2025-12-20T17:59:40.019108+00:00","status":"error","error":"RuntimeError","message":"Failed to read from sensor after 3 attempts","attempt":1,"max_attempts":5}
+{"timestamp":"2025-12-20T18:00:39.849108+00:00","status":"error","error":"RuntimeError","message":"Failed to read from sensor after 3 attempts","attempt":2,"max_attempts":5}
+{"timestamp":"2025-12-20T18:01:03.856958+00:00","status":"error","error":"RuntimeError","message":"Failed to read from sensor after 3 attempts","attempt":1,"max_attempts":5}
+{"timestamp":"2025-12-20T18:02:03.896902+00:00","status":"error","error":"RuntimeError","message":"Failed to read from sensor after 3 attempts","attempt":2,"max_attempts":5}
+{"timestamp":"2025-12-20T18:02:47.795498+00:00","pm25":8.2,"pm10":9.1,"device_id":"2996","port":"/dev/ttyUSB0"}
+{"timestamp":"2025-12-20T18:04:18.794729+00:00","pm25":7.4,"pm10":8.2,"device_id":"2996","port":"/dev/ttyUSB0"}
+{"timestamp":"2025-12-20T18:05:17.012996+00:00","pm25":7.6,"pm10":8.4,"device_id":"2996","port":"/dev/ttyUSB0"}
+{"timestamp":"2025-12-20T18:06:17.855799+00:00","pm25":7.6,"pm10":8.3,"device_id":"2996","port":"/dev/ttyUSB0"}
+{"timestamp":"2025-12-20T18:07:18.065836+00:00","pm25":8.7,"pm10":9.7,"device_id":"2996","port":"/dev/ttyUSB0"}
+{"timestamp":"2025-12-20T18:07:49.638343+00:00","pm25":0.0,"pm10":0.0,"device_id":"2996","port":"/dev/ttyUSB0"}
+{"timestamp":"2025-12-20T18:09:17.503581+00:00","pm25":7.8,"pm10":8.7,"device_id":"2996","port":"/dev/ttyUSB0"}
+{"timestamp":"2025-12-20T18:09:51.824300+00:00","pm25":0.0,"pm10":0.0,"device_id":"2996","port":"/dev/ttyUSB0"}
+{"timestamp":"2025-12-20T18:11:19.647746+00:00","pm25":7.6,"pm10":8.4,"device_id":"2996","port":"/dev/ttyUSB0"}
+{"timestamp":"2025-12-20T18:12:18.853137+00:00","pm25":7.5,"pm10":8.3,"device_id":"2996","port":"/dev/ttyUSB0"}
+{"timestamp":"2025-12-20T18:13:19.754064+00:00","pm25":8.0,"pm10":8.9,"device_id":"2996","port":"/dev/ttyUSB0"}
+{"timestamp":"2025-12-20T18:14:19.554486+00:00","pm25":7.7,"pm10":8.5,"device_id":"2996","port":"/dev/ttyUSB0"}
+{"timestamp":"2025-12-20T18:15:25.231819+00:00","pm25":7.6,"pm10":9.4,"device_id":"2996","port":"/dev/ttyUSB0","status":"ok"}
+{"timestamp":"2025-12-20T18:18:22.070417+00:00","pm25":8.0,"pm10":8.8,"device_id":"2996","port":"/dev/ttyUSB0","status":"ok"}
+{"timestamp":"2025-12-20T18:21:22.878449+00:00","pm25":8.1,"pm10":9.0,"device_id":"2996","port":"/dev/ttyUSB0","status":"ok"}
+{"timestamp":"2025-12-20T18:24:22.657598+00:00","pm25":7.6,"pm10":8.7,"device_id":"2996","port":"/dev/ttyUSB0","status":"ok"}
+{"timestamp":"2025-12-20T18:27:23.283748+00:00","pm25":7.2,"pm10":7.9,"device_id":"2996","port":"/dev/ttyUSB0","status":"ok"}
