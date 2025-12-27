@@ -72,5 +72,7 @@ Copy the example and adjust:
 ## Troubleshooting
 - Check device path: `ls -l /dev/ttyUSB* /dev/serial/by-id/* 2>/dev/null`
 - Permission: ensure your user is in `dialout` (re-login after adding).
+- Docker socket PermissionError (`PermissionError: [Errno 13] Permission denied` when running `docker compose up`): your user is not allowed to talk to the Docker daemon; add yourself to the `docker` group (`sudo usermod -aG docker $USER`), log out/in (or reboot), then rerun.
+- Prometheus panic `Error opening query log file ... /prometheus/queries.active: permission denied`: the host volume `./prometheus-data` is not writable by Prometheus (runs as UID 65534). Fix ownership/permissions before starting: `sudo chown -R 65534:65534 prometheus-data` (or recreate the folder with that ownership if you do not need existing data).
 - Prometheus up: visit `http://localhost:9090/api/v1/label/__name__/values`
 - Grafana dashboard missing data: confirm poller logs show measurements and that Prometheus scrape target `poller:9101` is UP.
